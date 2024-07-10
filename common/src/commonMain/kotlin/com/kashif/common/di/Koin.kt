@@ -62,6 +62,11 @@ fun createHttpClient(httpClientEngine: HttpClientEngine, json: Json, enableNetwo
         }
 
         install(ContentNegotiation) { json(json) }
+
+//        engine {
+//            proxy = ProxyBuilder.socks("127.0.0.1", 20170)
+//        }
+
         if (enableNetworkLogs) {
             install(Logging) {
                 logger = Logger.SIMPLE

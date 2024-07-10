@@ -15,13 +15,16 @@ internal fun App(platform: String) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceAround) {
-                VideoPlayer(
-                    modifier = Modifier.fillMaxWidth().height(400.dp),
-                    url =
-                        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
+            verticalArrangement = Arrangement.SpaceAround
+        ) {
+            VideoPlayer(
+                modifier = Modifier.fillMaxWidth().height(400.dp),
+                url = "https://yingshi.blob.core.chinacloudapi.cn/static/k/BigBuckBunny.mp4"
+//                "https://yingshi.blob.core.chinacloudapi.cn/static/crib.mp4"
+//                "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            )
 
-                Button(onClick = { text = "Hello, $platform" }) { Text(text) }
-            }
+            Button(onClick = { text = "Hello, $platform" }) { Text(text) }
+        }
     }
 }
